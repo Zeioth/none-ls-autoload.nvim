@@ -66,6 +66,6 @@ It's IMPORTANT to be aware a external source is just a way to tell none-ls how t
 ## FAQ
 
 * **Do I need mason for this plugin to work?** Yes.
-* **Will this plugin interfere with my none-ls options?** No.
+* **Do this plugin interfere with my none-ls options?** No.
 * **How is this plugin different from mason-null-ls?** Only a couple things. We add a new feature: support for external sources. We remove a feature: We don't provide commands to manually load/unload sources, as we do it automatically anyway. Aditionally, we aim to keep the code easier to understand and contribute to.
 * **My external none-ls source doesn't load correctly**: The source you pass must be formated like `'<anything-you-want>.<method>.<source-name>'`, as we extract the last two fields to load it. For example `'package_name.subdirectory.formatting.reformat_gherkin'`. So if the external source you are trying to pass come from a repository not formatted that way, just fork it and fix it's directory structure.
