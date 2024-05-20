@@ -35,7 +35,8 @@ The `none-ls` project stop supporting builtin sources when they have not been ma
 
 ### How to install them
 
-You install the dependency, and tell `none-ls-autoload.nvim` where to find it with the option `external_sources`.
+* You install the dependency
+* Then you tell `none-ls-autoload.nvim` where to find it with the option `external_sources`.
 
 ```lua
 {
