@@ -15,7 +15,7 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for externa
 * You would also have to manually deregister sources when you uninstall them, or none-ls will display errors.
 
 **Solution**:
-* By using `none-ls-autoload.nvim`, you don't have to worry anymore! This plugin will take care of automatically load/unload all mason packages you install/uninstall when necessary.
+* By using `none-ls-autoload.nvim`, you don't have to worry about any of that. This plugin will take care of automatically load/unload all mason packages you install/uninstall when necessary.
 
 ## How to install
 
