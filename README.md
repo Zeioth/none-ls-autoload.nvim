@@ -29,9 +29,9 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for externa
 ```
 
 ## How to use external sources
-**What are they?** none-ls periodically stop supporting builtin sources that have not been maintained for a while. What happen if we still need to use them? External sources is the answer! 
+**What are they?** The `none-ls` project stop supporting builtin sources when they have not been maintained for a while. Knowing that: External sources are packages you can install sources not oficially supported by `none-ls`.
 
-**How do I install them?** You install the dependency, and tell `none-ls-autoload` where to find it with the option `external_sources`.
+**How do I install them?** You install the dependency, and tell `none-ls-autoload.nvim` where to find it with the option `external_sources`.
 
 ```lua
 {
@@ -49,17 +49,17 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for externa
 },
 ```
 
-**How does it work?** It's IMPORTANT to be aware a external source is just a way to tell none-ls to know how to use a mason package. You HAVE to install the mason package to use it.
+**How does it work?** It's IMPORTANT to be aware a external source is just a way to tell none-ls how to use a mason package. You HAVE to install the mason package to use it.
 
 ## Available options
 
 | Option | Default | Description|
 |--|--|--|
-| `external_sources` | `{}` | If a mason package is not directly supported through a none-ls builtin source, you can specify a external source, so none-ls-autoload` know how to load/unload it automatically when needed. |
+| `external_sources` | `{}` | If a mason package is not directly supported through a none-ls builtin source, you can specify a external source, so none-ls-autoload.nvim` know how to load/unload it automatically when needed. |
 | `methods` | `{ diagnostics = true, formatting = true, code_actions = true, completion = true, hover = true }` | The type of sources we should load. This is handy in case you want to disable a certain kind of client. Or in case you want to manage a certain functionality using a different plugin. |
 
 ## FAQ
 
 * **Do I need mason for this plugin to work?** Yes.
 * **Will this plugin interfere with my none-ls options?** No.
-* **How is this plugin different from mason-null-ls?** Couple things. We support external sources. We don't provide commands to manually load/unload sources, as we do it automatically anyway.
+* **How is this plugin different from mason-null-ls?** Only a couple things. We add a new feature: support for external sources. We remove a feature: We don't provide commands to manually load/unload sources, as we do it automatically anyway. Aditionally, we aim to keep the code easier to understand and contribute to.
