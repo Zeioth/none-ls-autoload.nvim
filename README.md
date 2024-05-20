@@ -1,5 +1,5 @@
 # [none-ls-autoload](https://github.com/Zeioth/none-ls-autoload.nvim)
-Minimalistic alternative for the plugin `mason-null-ls` with support for none-ls external sources.
+Minimalistic alternative for the plugin `mason-null-ls` with support for [none-ls](https://github.com/nvimtools/none-ls.nvim) [external sources](https://github.com/nvimtools/none-ls-extras.nvim?tab=readme-ov-file#related-projects).
 
 ## Table of contents
 
