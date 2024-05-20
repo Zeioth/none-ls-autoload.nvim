@@ -48,7 +48,8 @@ The `none-ls` project [stop supporting builtin sources](https://github.com/nvimt
   },
   opts = {
     external_sources = {
-      'none-ls.formatting.reformat_gherkin' -- Example of telling none-ls-autoload where to find a external source.
+      -- Example of indicating to none-ls-autoload where to find a external source.
+      'none-ls.formatting.reformat_gherkin'
     },
   },
 },
