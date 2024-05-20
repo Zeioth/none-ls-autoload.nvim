@@ -31,7 +31,7 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for [none-l
 ## How to use none-ls external sources
 ### What are they?
 
-The `none-ls` project stop supporting builtin sources when they have not been maintained for a while. Knowing that: External sources are packages you can install sources not oficially supported by `none-ls`.
+The `none-ls` project stop supporting builtin sources when they have not been maintained for a while. Knowing that: External sources are packages you can install to use sources not oficially supported by `none-ls`.
 
 ### How to install them
 
