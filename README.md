@@ -1,5 +1,5 @@
 # [none-ls-autoload](https://github.com/Zeioth/none-ls-autoload.nvim)
-Minimalistic alternative for the plugin `mason-null-ls` with support for external sources.
+Minimalistic alternative for the plugin `mason-null-ls` with support for none-ls external sources.
 
 ## Table of contents
 
