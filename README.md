@@ -1,4 +1,4 @@
-# none-ls-autoload
+# [none-ls-autoload](https://github.com/Zeioth/none-ls-autoload.nvim)
 Minimalistic alternative for the plugin `mason-null-ls` with support for external sources.
 
 * Normally when you use none-ls you would have to manually register the sources you want to load. 
