@@ -1,9 +1,8 @@
 # none-ls-autoload
 Minimalistic alternative for the plugin `mason-null-ls` with support for external sources.
 
-Normally when you use none-ls you have to manually add the sources you want to load to the option 'sources'. 
-
-But with `none-ls-autoload.nvim`, you don't have to! This plugin take care of automatically load all mason packages you have installed for the current filetype for you.
+* Normally when you use none-ls you would have to manually register the sources you want to load. 
+* But by using `none-ls-autoload.nvim`, you don't have to! This plugin will take care of automatically load/unload all mason packages you have installed when necessary, as long as it's mason package is installed.
 
 ## Table of contents
 
