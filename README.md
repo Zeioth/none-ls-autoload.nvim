@@ -35,7 +35,7 @@ The `none-ls` project [stop supporting builtin sources](https://github.com/nvimt
 
 ### How to install them
 
-* You install the dependency
+* You install the dependency.
 * Then you tell `none-ls-autoload.nvim` where to find it with the option `external_sources`.
 
 ```lua
