@@ -61,7 +61,7 @@ The `none-ls` project [stop supporting builtin sources](https://github.com/nvimt
 },
 ```
 
-It's IMPORTANT to be aware a external source is just a way to tell none-ls how to use a mason package. You HAVE to install the mason package to use it.
+It's important to be aware a external source is just a way to tell none-ls how to use a mason package. You HAVE to install the mason package to use it.
 
 ## Available options
 
