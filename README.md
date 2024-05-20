@@ -14,8 +14,8 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for externa
 - [FAQ](#faq)
 
 ## Why
-**Problem**
-Normally when you use none-ls you have to manually add the sources you want to load to the option 'sources'. 
+**Problem**:
+* Normally when you use none-ls you have to manually add the sources you want to load to the option 'sources'. 
 
 **Solution**:
 * `none-ls-autoload.nvim`, automatically load your none-ls sources in a smart way, so you don't have to configure anything.
