@@ -5,8 +5,7 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for externa
 
 - [Why](#why)
 - [How to install](#how-to-install)
-- [How to use](#how-to-use)
-- [How to use with external sources](#how-to-use-with-external-sources)
+- [How to use external sources](#how-to-install-external-sources)
 - [Available options](#available-options)
 - [FAQ](#faq)
 
@@ -23,23 +22,13 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for externa
 ```lua
 {
   "zeioth/none-ls-autoload.nvim",
-  event = "User BaseFile",
-  dependencies = {
-    "williamboman/mason.nvim",      -- is used by this plugin.
-    "nvimtools/none-ls-extras.nvim" -- library of external none-ls sources.
-  },
-  opts = {
-    external_sources = {
-      'none-ls.formatting.reformat_gherkin'
-    },
-  },
+  event = "BufEnter",
+  dependencies = { "williamboman/mason.nvim" },
+  opts = {},
 },
 ```
 
-## how to use
-* `none-ls-autoload` will load your mason packages using `none-ls` right when it's necessary, and it will unload them when they are not. Which none-ls is not capable of doing by itself, because it doesn't depend on mason.
-
-## External sources with external sources
+## How to use external sources
 **What are they?** none-ls periodically stop supporting builtin sources that have not been maintained for a while. What happen if we still need to use them? External sources is the answer! 
 
 **How do I install them?** You install the dependency, and tell `none-ls-autoload` where to find it with the option `external_sources`.
