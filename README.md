@@ -29,9 +29,13 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for externa
 ```
 
 ## How to use none-ls external sources
-**What are they?** The `none-ls` project stop supporting builtin sources when they have not been maintained for a while. Knowing that: External sources are packages you can install sources not oficially supported by `none-ls`.
+### What are they?
 
-**How do I install them?** You install the dependency, and tell `none-ls-autoload.nvim` where to find it with the option `external_sources`.
+The `none-ls` project stop supporting builtin sources when they have not been maintained for a while. Knowing that: External sources are packages you can install sources not oficially supported by `none-ls`.
+
+### How to install them
+
+You install the dependency, and tell `none-ls-autoload.nvim` where to find it with the option `external_sources`.
 
 ```lua
 {
@@ -49,7 +53,7 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for externa
 },
 ```
 
-**How does it work?** It's IMPORTANT to be aware a external source is just a way to tell none-ls how to use a mason package. You HAVE to install the mason package to use it.
+It's IMPORTANT to be aware a external source is just a way to tell none-ls how to use a mason package. You HAVE to install the mason package to use it.
 
 ## Available options
 
