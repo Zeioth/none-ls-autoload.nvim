@@ -131,7 +131,7 @@ function M.autoload_sources()
 		local none_ls_source_name = mappings_lib.get_none_ls_source_name(mason_pkg_name)
 
 		return o.of_nilable(none_ls_source_name) -- return as pipeable object.
-	end                                      -- end of the helper function
+	end -- end of the helper function
 
 	-- Main functionality
 	local mason_installed_pkgs =
