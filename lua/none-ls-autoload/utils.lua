@@ -3,7 +3,7 @@
 --    Functions:
 --      -> register_external_source → Try to load a external source.
 --      -> get_builtin_handler      → Get a function to load a builtin.
---      -> filter_methods           → Get the methods of the current builtin source.
+--      -> filter_methods           → Get the methods of a builtin source.
 --      -> load_source              → Load a single source.
 --      -> autoload_sources         → Main utility function that load all sources.
 
@@ -99,14 +99,12 @@ local function load_source(source_name)
 
   -- Given a handler
   o.of_nilable(handlers[source_name]):or_(f.always(builtin_handler)):if_present(function(handler)
-    -- List of methods to source (linting, formatting...)
-    local methods = filter_methods(source_name)
-
     -- Register external source.
     local external_source_available = register_external_source_if_available(source_name)
 
-    -- Load builtin source.
-    if not external_source_available then -- you can remove this condition if you want to allow both, instead of externals prevailing over builtins.
+    if not external_source_available then
+      -- Load builtin source.
+      local methods = filter_methods(source_name)
       local ok, err = pcall(handler, source_name, methods)
 
       -- If it didn't load correctly, send a notification.
