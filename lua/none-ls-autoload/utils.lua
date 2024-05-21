@@ -4,7 +4,7 @@
 --      -> get_builtin_handler      → Get a function to load a builtin.
 --      -> register_external_source → Try to load a external source.
 --      -> filter_methods           → Add autocmds to a bufnr.
---      -> load_source              → load a single source.
+--      -> load_source              → Load a single source.
 --      -> autoload_sources         → Main utility function that load all sources.
 
 local none_ls = require('null-ls')
@@ -153,6 +153,36 @@ function M.autoload_sources()
       require('null-ls.sources').deregister(pkg.name)
     end)
   )
+	---Helper function: Given a mason pkg name, return its none-ls source name.
+	---@param mason_pkg_name string
+	---@return string none_ls_source_name
+	local function get_none_ls_source_name(mason_pkg_name)
+		local mappings_lib = require('none-ls-autoload.mappings.source')
+		local none_ls_source_name = mappings_lib.get_none_ls_source_name(mason_pkg_name)
+
+		return o.of_nilable(none_ls_source_name) -- return as pipeable object.
+	end -- end of the helper function
+
+	-- Main functionality
+	local mason_installed_pkgs =
+			f.filter_map(get_none_ls_source_name, require('mason-registry').get_installed_package_names())
+	f.each(load_source, mason_installed_pkgs)
+
+	-- Extra feature: Also register source on mason package installed.
+	require('mason-registry'):on(
+		'package:install:success',
+		vim.schedule_wrap(function(pkg)
+			get_none_ls_source_name(pkg.name):if_present(load_source)
+		end)
+	)
+
+	-- Extra feature: Also deregister source on mason package uninstalled.
+	require('mason-registry'):on(
+		'package:uninstall:success',
+		vim.schedule_wrap(function(pkg)
+	  	require('null-ls.sources').deregister(pkg.name)
+		end)
+	)
 end
 
 return M
