@@ -8,8 +8,8 @@ local M = {}
 
 -- maps mason package names to its none-ls name for the packages that need it.
 local package_to_none_ls = {
-	['cmake_lint'] = 'cmakelint',
-	['cmake_format'] = 'cmakelang',
+  ['cmake_lint'] = 'cmakelint',
+  ['cmake_format'] = 'cmakelang',
 	['eslint_d'] = 'eslint_d',
 	['goimports_reviser'] = 'goimports_reviser',
 	['phpcsfixer'] = 'php-cs-fixer',
