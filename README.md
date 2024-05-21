@@ -67,12 +67,17 @@ It's important to be aware a source is just a way to tell none-ls how to use a m
 
 | Option | Default | Description|
 |--|--|--|
-| `external_sources` | `{}` | If a mason package is not directly supported through a none-ls builtin source, you can specify a external source, so none-ls-autoload.nvim` know how to load/unload it automatically when needed. |
+| `external_sources` | `{}` | If a mason package is not directly supported through a none-ls builtin source, you can specify a external source, so `none-ls-autoload.nvim` know how to load/unload it automatically when needed. |
 | `methods` | `{ diagnostics = true, formatting = true, code_actions = true, completion = true, hover = true }` | The type of sources we should load. This is handy in case you want to disable a certain kind of client. Or in case you want to manage a certain functionality using a different plugin. |
+
+## 🌟 Support the project
+If you want to help me, please star this repository to increase the visibility of the project.
+
+[![Stargazers over time](https://starchart.cc/Zeioth/none-ls-autoload.nvim.svg)](https://starchart.cc/Zeioth/none-ls-autoload.nvim)
 
 ## FAQ
 
 * **Do I need mason for this plugin to work?** Yes.
 * **Do this plugin interfere with my none-ls options?** No.
 * **How is this plugin different from mason-null-ls?** Only a couple things. We add a new feature: support for external sources. We remove a feature: We don't provide commands to manually load/unload sources, as we do it automatically anyway. Aditionally, we aim to keep the code easier to understand and contribute to.
-* **My external none-ls source doesn't load correctly**: The source you pass must be formated like `'<anything-you-want>.<method>.<source-name>'`, as we extract the last two fields to load it. For example `'package_name.subdirectory.formatting.reformat_gherkin'`. So if the external source you are trying to pass come from a repository not formatted that way, just fork it and fix it's directory structure.
+* **My external none-ls source doesn't load correctly**: The source you pass must be formated like `'<anything-you-want>.<method>.<source-name>'`, as we extract the last two fields to load it. For example `'package_name.subdirectory.formatting.reformat_gherkin'`. So if the external source you are trying to pass come from a repository not formatted that way, just fork it and fix its directory structure.
