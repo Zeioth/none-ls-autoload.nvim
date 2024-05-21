@@ -70,6 +70,11 @@ It's important to be aware a source is just a way to tell none-ls how to use a m
 | `external_sources` | `{}` | If a mason package is not directly supported through a none-ls builtin source, you can specify a external source, so none-ls-autoload.nvim` know how to load/unload it automatically when needed. |
 | `methods` | `{ diagnostics = true, formatting = true, code_actions = true, completion = true, hover = true }` | The type of sources we should load. This is handy in case you want to disable a certain kind of client. Or in case you want to manage a certain functionality using a different plugin. |
 
+## 🌟 Support the project
+If you want to help me, please star this repository to increase the visibility of the project.
+
+[![Stargazers over time](https://starchart.cc/Zeioth/none-ls-autoload.nvim.svg)](https://starchart.cc/Zeioth/none-ls-autoload.nvim)
+
 ## FAQ
 
 * **Do I need mason for this plugin to work?** Yes.
