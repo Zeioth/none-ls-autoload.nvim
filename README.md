@@ -1,6 +1,12 @@
 # [none-ls-autoload.nvim](https://github.com/Zeioth/none-ls-autoload.nvim)
 Minimalistic alternative for the plugin `mason-null-ls` with support for [none-ls](https://github.com/nvimtools/none-ls.nvim) [external sources](https://github.com/nvimtools/none-ls-extras.nvim?tab=readme-ov-file#related-projects).
 
+<div align="center">
+  <a href="https://discord.gg/ymcMaSnq7d" rel="nofollow">
+      <img src="https://img.shields.io/discord/1121138836525813760?color=azure&labelColor=6DC2A4&logo=discord&logoColor=black&label=Join the discord server&style=for-the-badge" data-canonical-src="https://img.shields.io/discord/1121138836525813760">
+    </a>
+</div>
+
 ## Table of contents
 
 - [Why](#why)
@@ -48,14 +54,14 @@ The `none-ls` project [stop supporting builtin sources](https://github.com/nvimt
   },
   opts = {
     external_sources = {
-      -- Example of indicating to none-ls-autoload where to find a external source.
+      -- Example of specifying where to find a external source.
       'none-ls.formatting.reformat_gherkin'
     },
   },
 },
 ```
 
-It's IMPORTANT to be aware a external source is just a way to tell none-ls how to use a mason package. You HAVE to install the mason package to use it.
+It's important to be aware a source is just a way to tell none-ls how to use a mason package. You HAVE to install the mason package to use it.
 
 ## Available options
 
