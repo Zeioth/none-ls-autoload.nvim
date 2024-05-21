@@ -54,7 +54,7 @@ The `none-ls` project [stop supporting builtin sources](https://github.com/nvimt
   },
   opts = {
     external_sources = {
-      -- Example of specifying where to find a external source.
+      -- To specify where to find a external source.
       'none-ls-external-sources.formatting.reformat_gherkin'
     },
   },
