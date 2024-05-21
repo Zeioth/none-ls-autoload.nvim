@@ -1,9 +1,9 @@
 -- General utilities.
 
 --    Functions:
---      -> get_builtin_handler      → Get a function to load a builtin.
 --      -> register_external_source → Try to load a external source.
---      -> filter_methods           → Add autocmds to a bufnr.
+--      -> get_builtin_handler      → Get a function to load a builtin.
+--      -> filter_methods           → Get the methods of the current builtin source.
 --      -> load_source              → Load a single source.
 --      -> autoload_sources         → Main utility function that load all sources.
 
