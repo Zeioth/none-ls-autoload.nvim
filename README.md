@@ -50,12 +50,12 @@ The `none-ls` project [stop supporting builtin sources](https://github.com/nvimt
   event = "User BaseFile",
   dependencies = {
     "williamboman/mason.nvim",
-    "nvimtools/none-ls-extras.nvim" -- Example of installing a external sources library.
+    "zeioth/none-ls-external-sources.nvim" -- Example of installing a external sources library.
   },
   opts = {
     external_sources = {
       -- Example of specifying where to find a external source.
-      'none-ls.formatting.reformat_gherkin'
+      'none-ls-external-sources.formatting.reformat_gherkin'
     },
   },
 },
