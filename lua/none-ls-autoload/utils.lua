@@ -4,7 +4,7 @@
 --      -> get_builtin_handler      → Get a function to load a builtin.
 --      -> register_external_source → Try to load a external source.
 --      -> filter_methods           → Add autocmds to a bufnr.
---      -> load_source              → load a single source.
+--      -> load_source              → Load a single source.
 --      -> autoload_sources         → Main utility function that load all sources.
 
 local none_ls = require('null-ls')
