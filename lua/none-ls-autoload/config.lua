@@ -8,7 +8,6 @@ function M.set(opts)
     completion = true,
     hover = true,
   } -- source types to load. set to false to ignore.
-  M.handlers = opts.handlers or {} -- handlers to use aditionally to the ones from none-ls.
   M.external_sources = opts.external_sources or {} -- extra sources to look for. formatted as { { '<package_name>', 'module_path' } }
 
   -- expose config globally

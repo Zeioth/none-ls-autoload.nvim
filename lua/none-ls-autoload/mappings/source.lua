@@ -8,17 +8,17 @@ local M = {}
 
 -- maps mason package names to its none-ls name for the packages that need it.
 local package_to_none_ls = {
-	['cmake_lint'] = 'cmakelint',
-	['cmake_format'] = 'cmakelang',
-	['eslint_d'] = 'eslint_d',
-	['goimports_reviser'] = 'goimports_reviser',
-	['phpcsfixer'] = 'php-cs-fixer',
-	['verible_verilog_format'] = 'verible',
-	['lua_format'] = 'luaformatter',
-	['ansiblelint'] = 'ansible-lint',
-	['deno_fmt'] = 'deno',
-	['ruff_format'] = 'ruff',
-	['xmlformat'] = 'xmlformatter',
+  ['cmake_lint'] = 'cmakelint',
+  ['cmake_format'] = 'cmakelang',
+  ['eslint_d'] = 'eslint_d',
+  ['goimports_reviser'] = 'goimports_reviser',
+  ['phpcsfixer'] = 'php-cs-fixer',
+  ['verible_verilog_format'] = 'verible',
+  ['lua_format'] = 'luaformatter',
+  ['ansiblelint'] = 'ansible-lint',
+  ['deno_fmt'] = 'deno',
+  ['ruff_format'] = 'ruff',
+  ['xmlformat'] = 'xmlformatter',
 }
 
 -- Helpers to convert between mason and none-ls.
@@ -27,13 +27,13 @@ local package_to_none_ls = {
 ---Given a mason pkg name, use its none-ls source name equivalent.
 ---@return string name none-ls source name.
 M.get_none_ls_source_name = f.memoize(function(source)
-	local name = o.of_nilable(
-		package_to_none_ls[source]):or_else_get(
-  		f.always(source:gsub('%_', '-')
-  	)
-	)
+  local name = o.of_nilable(
+    package_to_none_ls[source]):or_else_get(
+      f.always(source:gsub('%_', '-')
+    )
+  )
 
-	return name
+  return name
 end)
 
 return M
