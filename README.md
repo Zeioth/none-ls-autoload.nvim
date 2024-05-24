@@ -29,7 +29,7 @@ Minimalistic alternative for the plugin `mason-null-ls` with support for [none-l
 {
   "zeioth/none-ls-autoload.nvim",
   event = "BufEnter",
-  dependencies = { "williamboman/mason.nvim" },
+  dependencies = { "williamboman/mason.nvim", "nvimtools/none-ls.nvim" },
   opts = {},
 },
 ```
