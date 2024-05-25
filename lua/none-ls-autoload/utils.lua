@@ -54,7 +54,7 @@ local function register_external_source_if_available(source_name)
   return was_registered
 end
 
----The function that register the none-ls source.
+---The function that register the none-ls builtin source.
 ---@param source string none-ls source to load.
 ---@param methods string[] accepted values of for table are "diagnostics", "formatting", "code_actions", "completion", "hover",
 local get_builtin_handler = function(source, methods)
