@@ -47,7 +47,7 @@ The `none-ls` project [stop supporting builtin sources](https://github.com/nvimt
 ```lua
 {
   "zeioth/none-ls-autoload.nvim",
-  event = "User BaseFile",
+  event = "BufEnter",
   dependencies = {
     "williamboman/mason.nvim",
     "zeioth/none-ls-external-sources.nvim" -- To install a external sources library.
