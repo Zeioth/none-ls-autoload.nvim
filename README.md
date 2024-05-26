@@ -79,7 +79,7 @@ If you want to help me, please star this repository to increase the visibility o
 
 * **Do I need mason for this plugin to work?** Yes.
 * **Do this plugin interfere with my none-ls options?** No.
-* **Do external sources have priority above builtin sources?** Yes, if both are present, the external source you define will have priority.
+* **Do external sources have priority over builtin sources?** Yes, if both are present, the external source you define will have priority.
 * **How is this plugin different from mason-null-ls?** Only a couple things. We add a new feature: support for external sources. We remove a feature: We don't provide commands to manually load/unload sources, as we do it automatically anyway. Aditionally, we aim to keep the code easier to understand and contribute to.
 * **My external none-ls source doesn't load correctly**: The source you pass must be formated like `'<anything-you-want>.<method>.<source-name>'`, as we extract the last two fields to load it. For example `'package_name.subdirectory.formatting.reformat_gherkin'`. So if the external source you are trying to pass come from a repository not formatted that way, just fork it and fix its directory structure.
 * **Where can I find external sources?**: [Here](https://github.com/Zeioth/none-ls-external-sources.nvim).
